@@ -8,7 +8,7 @@ RUN chown -R root:root /root
 RUN [ -e /etc/ssl/certs/ca-certificates.crt ] || \
       ln -s /etc/ca-certificates/extracted/ca-bundle.trust.crt /etc/ssl/certs/ca-certificates.crt
 RUN pacman -Rsc --noconfirm wayland llvm-libs ; \
-    pacman-mirrors -c Germany && \
+    pacman-mirrors --fasttrack && \
     pacman -Syuu --noconfirm
 
 RUN pacman -S --noconfirm base-devel bash-completion cower glibc git lzop openssh python sed sudo vim wget && \

@@ -21,8 +21,8 @@ You need docker. You can either get the corresponding image from
 (it will not be updated regularly) or build the image locally (recommended):
 
 ```bash
-systemctl start docker
 git clone https://github.com/ftalbrecht/manjaro-aur-base.git
+systemctl start docker # ensure docker is running
 docker build --rm -t ftschindler/manjaro-aur-base -f manjaro-aur-base/Dockerfile manjaro-aur-base/
 ```
 
